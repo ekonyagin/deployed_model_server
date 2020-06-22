@@ -16,4 +16,4 @@ class Regressor():
         return df
     def predict_and_save(self, fname):
         df = self.predict(fname)
-        df.to_excel("out.xlsx")
+        df.to_excel(os.path.join("out_", fname[1:]))
