@@ -10,7 +10,7 @@ if __name__ == "__main__":
     excel_file = "file_training.xlsx"
     df = pd.read_excel(excel_file)
     
-    print(f"File {excel file} read successfully!")
+    print(f"File {excel_file} read successfully!")
     
     elem = df.columns[78]
 
@@ -50,7 +50,7 @@ if __name__ == "__main__":
                  '1850-1900%',
                  '1900-2000%',
                  '2000+%'], axis=1)
-
+    df.head().to_excel('new_sample.xlsx', index=False)
     X_train, X_test, y_train, y_test = train_test_split(df.drop(['РАСХОД СР'], axis=1),
                                                         df['РАСХОД СР'],
                                                         test_size=0.2)
